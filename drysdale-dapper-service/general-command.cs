@@ -67,5 +67,15 @@ namespace Drysdale.Dapper.Service
         public async Task<int> ExecuteManyAsync(string proc, object insertList, IDbConnection con) =>
             await con.ExecuteAsync(sql: proc, insertList, commandType: CommandType.StoredProcedure);
         #endregion
+
+        #region StoredProcedureExist...
+        /// <summary>
+        /// StoredProcedureExist
+        /// </summary>
+        /// <param name="con"></param>
+        /// <param name="pName"></param>
+        /// <returns></returns>
+        public static bool StoredProcedureExist(string con, string pName) => true;
+        #endregion
     }
 }
