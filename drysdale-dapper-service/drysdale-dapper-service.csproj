@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <RootNamespace>Drysdale.Dapper.Service</RootNamespace>
     <AssemblyName>Drysdale.Dapper.Service</AssemblyName>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -9,25 +9,30 @@
     <Company>Sterp</Company>
     <Authors>Drysdale Chivhanga</Authors>
     <Description>A simple Dapper Service by Drysdale Chivhanga</Description>
-    <Version>1.0.8</Version>
-    <PackageIcon>SterpLogo-Ewb.png</PackageIcon>
-    <PackageReleaseNotes>This one has a public github</PackageReleaseNotes>
+    <Version>1.1.2</Version>
+  
+    <PackageReleaseNotes>Added Query-Type And Changed The Name Of Query-Commander </PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/drysdale-chivhanga/dapper-service</PackageProjectUrl>
+    <ApplicationIcon>Mucheka-Wakasunga-Beta.ico</ApplicationIcon>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
+  <ItemGroup>    <Content Include="Mucheka-Wakasunga-Beta.ico" />
+  </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\SterpLogo-Ewb.png">
+    <None Include="..\..\..\..\Downloads\Mucheka-Wakasunga-Beta.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
     <None Include="..\.editorconfig" Link=".editorconfig" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Dapper" Version="2.0.35" />
-    <PackageReference Include="MySqlConnector" Version="1.0.1" />
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="Drysdale.Query.Response" Version="1.0.1" />
+    <PackageReference Include="MySqlConnector" Version="2.1.10" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
   </ItemGroup>
 
 </Project>
